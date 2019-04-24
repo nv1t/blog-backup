@@ -152,7 +152,7 @@ Running the exploit, it will try to register an user "nuit" with initial passwor
 After it has all informations it can extract from the single md5 hash, it uses the hash as new password and uses `md5(md5("test"))` as new hash. That's an easy way for an endless supply of hashes.
 (See code at the end of the article)
 
-![Exploit in GIF](/img/_posts/ezgif.com-gif-maker.gif)
+![Exploit in GIF](/blog/img/_posts/ezgif.com-gif-maker.gif)
 
 Needless to say: even with the sorting by id (which makes it more reliable and faster) we crush the below 22 characters challenge with 17 chars.
 Without it would be 12 :)
