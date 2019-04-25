@@ -28,7 +28,7 @@ Aber zurueck zu der eigentlichen Challenge "[Challenge Lab 0x02](https://hack.me
 *Wer die Challenge selber loesen will, sollte hier nicht weiterlesen.*
 
 Man wird mit einer Bierseite begruesst.
-![](/blog/img/posts/2016-06-22-012744_986x662_scrot.png)
+![]({{site.baseurl}}/img/posts/2016-06-22-012744_986x662_scrot.png)
 
 ## Local File Inclusion
 Nachdem man ein wenig auf den ersten Seite rumgeklickt hat sollte erstmals die URLs
@@ -38,7 +38,7 @@ Nachdem man ein wenig auf den ersten Seite rumgeklickt hat sollte erstmals die U
 
 ins Auge gefallen sein. Auch sollte man den neuen Menupunkt "Fresh News" sehen, der hinzugekommen ist.
 
-![](/blog/img/posts/2016-06-22-012954_297x266_scrot.png)
+![]({{site.baseurl}}/img/posts/2016-06-22-012954_297x266_scrot.png)
 
 Unter diesem Menupunkt bekommt man den ersten Hinweis:
 
@@ -52,11 +52,11 @@ Also befinden wir uns noch nicht im richtigen Ordner.
 Ein kurzer Check mit `/about.php?a=../index.php` bestaetigt das. Aber auch hier kann keine config.php gefunden werden.
 Probieren wir das ganze ohne die PHP Endung bekommen wir eine ominoese Fehlermeldung.
 
-![](/blog/img/posts/2016-06-22-15_06_01-More-about-beer.png)
+![]({{site.baseurl}}/img/posts/2016-06-22-15_06_01-More-about-beer.png)
 
 Es handelt sich hierbei also um einen Ordner. Wenn man nun dort also noch die `config.php` in dem Ordner `../config` aufruft, kann man im Quelltext den Salt finden.
 
-![](/blog/img/posts/2016-06-22-15_08_12-http___s43216-101303-idu-sipontum-hack-me_about-php_a---_config_config-php.png)
+![]({{site.baseurl}}/img/posts/2016-06-22-15_08_12-http___s43216-101303-idu-sipontum-hack-me_about-php_a---_config_config-php.png)
 
 Damit sind wir im nächsten Level bei einer SQL Injection.
 
@@ -65,7 +65,7 @@ Damit sind wir im nächsten Level bei einer SQL Injection.
 Hierbei kann man sich verschiedene Biere genauer anschauen. Jedes Bier wird über die URL `/beer.php?id=<ID>` aufgerufen, wobei die ID eine beliebige Zahl sein kann.
 Da ich ja schon sagte, dass es sich hierbei um eine SQLi handelt, bleibt uns nur der Parameter `id` übrig. Das es sich hierbei um eine SQLi handelt findet man im Menüpunkt "Kelly Green", der nach Eingabe eines einfachen Anführungszeichens sichtbar wird.
 
-![](/blog/img/posts/2016-06-22-15_26_46-2---Checkpoint.png)
+![]({{site.baseurl}}/img/posts/2016-06-22-15_26_46-2---Checkpoint.png)
 
 Nun gibt es hier 2 Methoden dies zu lösen.
 
@@ -103,7 +103,8 @@ Warning: mysql_fetch_array() expects parameter 1 to be resource, boolean given i
 ```
 
 Durch weiteres rumprobieren kommt man darauf, dass die Eingabe `' union select 1,2,'3` eine gewollte Ausgabe, ohne Fehlermeldung, liefert.
-![](/blog/img/posts/2016-06-22-15_22_15-Program-Manager.png)
+
+![]({{site.baseurl}}/img/posts/2016-06-22-15_22_15-Program-Manager.png)
 Wir wissen nun 2 Punkte:
 
 * 2 und 3 sind für Ausgaben gut
@@ -117,7 +118,7 @@ Wenn man sich ein wenig mit SQL auskennt, kann man sich aus den Bedingungen folg
 
 Das `group_concat` bewirkt hierbei, dass die Namen zusammengefügt und als ein String ausgegeben werden.
 
-![](/blog/img/posts/2016-06-22-15_25_42-Program-Manager.png)
+![]({{site.baseurl}}/img/posts/2016-06-22-15_25_42-Program-Manager.png)
 
 D.h. die Datenbank hat also 2 Tabellen. Da wir das Passwort von Kelly Green holen wollen, ist die Datenbank `users` interessant.
 
@@ -126,7 +127,7 @@ Wenn wir unseren SQL Exploit ein wenig anpassen, bekommen wir auch alle Columns 
 ```
 ' UNION SELECT 1,2,group_concat(column_name) FROM information_schema.columns WHERE table_name = 'users' AND table_schema != 'mysql' AND table_schema != 'information_schema
 ```
-![](/blog/img/posts/2016-06-22-15_29_38-Program-Manager.png)
+![]({{site.baseurl}}/img/posts/2016-06-22-15_29_38-Program-Manager.png)
 
 Wir wollen das Passwort von Kelly Green aus der Tabelle `users` haben, was wir mit folgendem SQL Exploit erreichen.
 
@@ -134,11 +135,11 @@ Wir wollen das Passwort von Kelly Green aus der Tabelle `users` haben, was wir m
 ' UNION SELECT 1,2,group_concat(concat(name,' - ',surname,' - ',password),'<br />') FROM users WHERE name='Kelly' and surname='Green
 ```
 
-![](/blog/img/posts/2016-06-22-15_31_24-Program-Manager.png)
+![]({{site.baseurl}}/img/posts/2016-06-22-15_31_24-Program-Manager.png)
 
 Alternativ können auch einfach alle Benutzer ausgegeben werden, wenn man die Where-Statements weglässt und ein einfaches `where 1='1` aufgrund des Anführungszeichens hinzufügt.
 
-![](/blog/img/posts/2016-06-22-15_31_56-Our-Beers.png)
+![]({{site.baseurl}}/img/posts/2016-06-22-15_31_56-Our-Beers.png)
 
 Nun haben wir also das Passwort von Kelly Green und können endlich in die letzte Challenge.
 
@@ -148,7 +149,7 @@ Wenn man base64 Decoder auf den String anwendet, kommt tatsächlich ein neuer St
 Wir strippen also den Salt von dem String und kommen mit einem Passwort raus `S09ONTY4`.
 
 Nach Eingabe des Passwortes:
-![](/blog/img/posts/2016-06-22-15_35_44-3---Final-STEP.png)
+![]({{site.baseurl}}/img/posts/2016-06-22-15_35_44-3---Final-STEP.png)
 
 Awwww....
 
@@ -169,7 +170,7 @@ Dies liefert uns den Algorithmus: `password = base64(base64(password) + salt)`
 Wir müssen also `S09ONTY4` nochmal mit base64 Decoden und landen bei `KON568`.
 
 Nach Eingabe dieses Strings, endlich:
-![](/blog/img/posts/2016-06-22-15_39_47-3---Final-STEP.png)
+![]({{site.baseurl}}/img/posts/2016-06-22-15_39_47-3---Final-STEP.png)
 
 *(Wer mit SQLMap einfach die gesamte Datenbank geholt hat, hätte auch einfach nach `base64` grepen können und der Algorithmus wäre klar gewesen)* 
 
