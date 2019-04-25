@@ -4,7 +4,7 @@ title: About me
 subtitle: Why you don't want me in your hardware
 ---
 
-My name is Jan Hoersch. I have the following qualities:
+My name is Jan. I have the following qualities:
 
 - I rock at wearing sunglasses (kindof)
 - I'm a runner
