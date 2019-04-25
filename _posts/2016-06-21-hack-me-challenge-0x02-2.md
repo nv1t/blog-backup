@@ -37,6 +37,7 @@ Nachdem man ein wenig auf den ersten Seite rumgeklickt hat sollte erstmals die U
 * /about.php?a=ingredients
 
 ins Auge gefallen sein. Auch sollte man den neuen Menupunkt "Fresh News" sehen, der hinzugekommen ist.
+
 ![](/blog/img/posts/2016-06-22-012954_297x266_scrot.png)
 
 Unter diesem Menupunkt bekommt man den ersten Hinweis:

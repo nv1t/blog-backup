@@ -57,7 +57,7 @@ Geliefert wird ein reiner Bytestream eines JPEG Bildes den wir theoretisch so in
 
 Damit haetten wir eines der ersten Bilder:
 
-![](/blog/imag/posts/2013-06-28-101747_1024x768_scrot.png)
+![](/blog/img/posts/2013-06-28-101747_1024x768_scrot.png)
 
 Am Anfang hatten wir noch leichte Pixelfehler, da wir vergessen haben die Header aus den Paketen rauszuparsen. Was uns natuerlich die Pixel auf interessante Art und Weise zerschossen hat.
 
