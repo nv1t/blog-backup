@@ -9,7 +9,7 @@ It all started with a simple question from my beloved girlfriend: "Is it possibl
 
 But: Scanning such a massive picture would cost ~40 Euro and nobody was willing to pay that. I can understand that nearly every scan could damage the map, so, wouldn't it be a better option to use an already scanned one?
 
-The search began and she was successful. A [Czech website](http://chartae-antiquae.cz/) old maps had this map in it's entirety on their page.
+The search began and it was successful. A [Czech website](http://chartae-antiquae.cz/) old maps had this map in it's entirety on their page.
 
 The only crux: It was in tiles and viewable like google maps. No complete picture in high resolution was anywhere to be found.
 
