@@ -87,4 +87,4 @@ Give Credit were credit is due. There were a lot more links and forum posts and 
     * [https://www.data-medics.com/forum/samsung-usb-to-sata-pcb-compatability-t1438.html](https://www.data-medics.com/forum/samsung-usb-to-sata-pcb-compatability-t1438.html)
     * [https://forum.acelaboratory.com/viewtopic.php?f=155&t=8376](https://forum.acelaboratory.com/viewtopic.php?f=155&t=8376)
     * [https://www.data-medics.com/forum/toshiba-usb-to-sata-guide-t1305.html](https://www.data-medics.com/forum/toshiba-usb-to-sata-guide-t1305.html)
-* More Information on USB Drives: https://blog.acelaboratory.com/if-you-are-planning-to-work-usb-external-hard-drives.html
+* More Information on USB Drives: [https://blog.acelaboratory.com/if-you-are-planning-to-work-usb-external-hard-drives.html](https://blog.acelaboratory.com/if-you-are-planning-to-work-usb-external-hard-drives.html)
