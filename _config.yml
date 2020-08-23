@@ -23,7 +23,9 @@ description: A virtual proof that name is awesome!
 
 # List of links in the navigation bar
 navbar-links:
-  CV: "https://nv1t.github.io/cv"
+  About Me:
+     - CV (recommended): "https://nv1t.github.io/markdown-cv"
+     - CV in PDF Format: "https://nv1t.github.io/pdf/jan.hoersch_CV.pdf"
 #  Resources:
 #    - Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
 #    - Learn markdown: "http://www.markdowntutorial.com/"
