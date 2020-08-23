@@ -2,6 +2,7 @@
 layout: page
 title: About me
 subtitle: Why you don't want me in your hardware
+use-site-title: false
 ---
 
 My name is Jan. I have the following qualities:
