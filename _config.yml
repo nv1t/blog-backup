@@ -108,7 +108,7 @@ share-links-active:
 #gtag: ""
 
 # Fill in your Google Analytics ID to track your website using GA
-google_analytics: "UA-73049357-1"
+# google_analytics: "UA-73049357-1"
 
 # Google Tag Manager ID
 #gtm: ""
@@ -117,10 +117,10 @@ google_analytics: "UA-73049357-1"
 # Uncomment the following section to enable Matomo. The opt-out parameter controls
 # whether or not you want to allow users to opt out of tracking.
 
-#matomo:
-#  site_id: "9"
-#  uri: "demo.wiki.pro"
-#  opt-out: true
+matomo:
+  site_id: "1"
+  uri: "matomo.odeta.de"
+  opt-out: true
 
 # --- Comments --- #
 
