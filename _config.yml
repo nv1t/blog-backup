@@ -149,7 +149,7 @@ footer-link-col: "#404040"
 # whether or not you want to allow users to opt out of tracking.
 matomo:
   site_id: "1"
-  uri: "matomo.odeta.de"
+  uri: "matomo.1nsi.de"
   opt-out: false
 
 # --- Comments --- #
