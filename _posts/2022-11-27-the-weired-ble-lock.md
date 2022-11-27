@@ -275,5 +275,5 @@ If you own something from `https://www.elinksmart.net/`, consider your password 
 
 # References:
 
-* https://www.youtube.com/watch?v=AIaFleFMPn0 - LockPickingLawyer
-* https://www.lockhacking.com/2022/05/24/elinksmart-padlock-cracked.html
+* [https://www.youtube.com/watch?v=AIaFleFMPn0](https://www.youtube.com/watch?v=AIaFleFMPn0) - LockPickingLawyer
+* [https://www.lockhacking.com/2022/05/24/elinksmart-padlock-cracked.html](https://www.lockhacking.com/2022/05/24/elinksmart-padlock-cracked.html) - Attack BLE on this lock
