@@ -7,7 +7,6 @@ created: 2022-07-20T21:03:47+02:00
 permalink: the-weired-ble-lock
 published: true
 ---
-# The weired BLE-Lock
 
 **tl;dr;** My knowledge in Bluetooth LE Communication got quite rusty over the time and i wanted to refresh it with an easy target the other day. I wanted to open up the lock with a simple bluetooth command but ended up having access to their entire backend database with a lot of unique users across their entire product lineup.
 
