@@ -243,8 +243,12 @@ I usually do my whole shennanigans with APIs with Burp. My Burp configuration do
 
 Adding a single and double quote (yes you need both) at the `mac` parameter produces an interesting output:
 
-```
-{"state":"fail","type":1,"desc":"\"SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''\\\"' at line 1\""}
+```json
+{
+  "state": "fail",
+  "type": 1,
+  "desc": "\"SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''\\\"' at line 1\""
+}
 ```
 
 Uiuiuiuiui....that doesn't look good. 
