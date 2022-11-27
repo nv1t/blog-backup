@@ -112,7 +112,61 @@ Vary: Accept-Encoding
 X-Powered-By: PHP/7.2.24
 Content-Length: 792
 
-{"state":"success","type":0,"desc":"接口操作成功","data":[{"mac":"A4:C1:38:22:0A:33","isMaster":0,"masterId":506827,"masterName":"innovatekink","shareType":1,"time_zone":"+02:00","shareLockTimeArray":[{"startTime":"00:00","enable":1,"endTime":"23:59","repeat":127},{"startTime":"00:00","enable":0,"endTime":"23:59","repeat":127},{"startTime":"00:00","enable":0,"endTime":"23:59","repeat":127}],"shareLockTime":0,"name":"Riri","password":"861226","admin_password":"861226","fgpSup":1,"protocolVersion":"7","fwVersion":"1.30.5.0","preLoseSup":0,"preLose":0,"backAdvSup":0,"backAdv":0,"locationSetup":1,"alarmSup":0,"alarmState":0,"order_type":0,"fg_num":2,"last_open_user":"kinkysexboy","last_time":"2022-07-21 01:31:55","last_timeUTC":"2022-07-20 17:31:55","admin_name":"innovatekink"}]}
+{
+  "state": "success",
+  "type": 0,
+  "desc": "接口操作成功",
+  "data": [
+    {
+      "mac": "A4:C1:38:22:0A:33",
+      "isMaster": 0,
+      "masterId": 506827,
+      "masterName": "innovatekink",
+      "shareType": 1,
+      "time_zone": "+02:00",
+      "shareLockTimeArray": [
+        {
+          "startTime": "00:00",
+          "enable": 1,
+          "endTime": "23:59",
+          "repeat": 127
+        },
+        {
+          "startTime": "00:00",
+          "enable": 0,
+          "endTime": "23:59",
+          "repeat": 127
+        },
+        {
+          "startTime": "00:00",
+          "enable": 0,
+          "endTime": "23:59",
+          "repeat": 127
+        }
+      ],
+      "shareLockTime": 0,
+      "name": "Riri",
+      "password": "861226",
+      "admin_password": "861226",
+      "fgpSup": 1,
+      "protocolVersion": "7",
+      "fwVersion": "1.30.5.0",
+      "preLoseSup": 0,
+      "preLose": 0,
+      "backAdvSup": 0,
+      "backAdv": 0,
+      "locationSetup": 1,
+      "alarmSup": 0,
+      "alarmState": 0,
+      "order_type": 0,
+      "fg_num": 2,
+      "last_open_user": "kinkysexboy",
+      "last_time": "2022-07-21 01:31:55",
+      "last_timeUTC": "2022-07-20 17:31:55",
+      "admin_name": "innovatekink"
+    }
+  ]
+}
 ```
 
 If you look closely on the Response, you can even spot the password of the lock, which get's send by BLE. 
@@ -145,7 +199,20 @@ Vary: Accept-Encoding
 X-Powered-By: PHP/7.2.24
 Content-Length: 188
 
-{"state":"success","type":0,"desc":"接口操作成功","data":{"name":"lock","mac":"A4:C1:38:21:7F:D0","isBind":1,"password":"475029","reset":1,"lock_status":1,"admin_password":"475029"}}
+{
+  "state": "success",
+  "type": 0,
+  "desc": "接口操作成功",
+  "data": {
+    "name": "lock",
+    "mac": "A4:C1:38:21:7F:D0",
+    "isBind": 1,
+    "password": "475029",
+    "reset": 1,
+    "lock_status": 1,
+    "admin_password": "475029"
+  }
+}
 ```
 
 We now have a method to lookup every lock in existence. I take the assumptions, they are nice people and respect the first 3 bytes of the Mac-Address to be a Vendor Identifier, we "only" have to crawl for `255*255*255` possibilities.
