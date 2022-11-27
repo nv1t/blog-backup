@@ -132,7 +132,7 @@ Content-Length: 95
 Accept-Encoding: gzip, deflate
 User-Agent: okhttp/3.9.1
 
-mac=A4%3aC1%3a38%3a21%3a7F%3aD0&loginToken=92103907b8e0717e4bdf46bda3324932&type=1&cp=&isBind=0
+mac=A4%3aC1%3a38%3a21%3a7F%3aD0&loginToken=92103907b8e0[...redacted....]&type=1&cp=&isBind=0
 
 -----
 
