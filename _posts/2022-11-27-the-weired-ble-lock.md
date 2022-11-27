@@ -175,7 +175,7 @@ I thought to myself. NICE! I can now open every lock they have.
 
 So i looked on, if i can find a better function to get informations about a specific lock.
 
-## Sesam open: one request for every lock
+## Open Sesam: one request for every lock
 There is a function called `getLockInfoByMac`,  which the mac address of this lock a `POST` Argument and gets back with all information about lock.
 
 ```http
@@ -217,7 +217,7 @@ Content-Length: 188
 
 We now have a method to lookup every lock in existence. I take the assumptions, they are nice people and respect the first 3 bytes of the Mac-Address to be a Vendor Identifier, we "only" have to crawl for `255*255*255` possibilities.
 
-But something weired popped up.
+But something weird popped up.
 
 ![]({{site.baseurl}}/img/posts/2022/Pasted image 20221124094309.png)
 
