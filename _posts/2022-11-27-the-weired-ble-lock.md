@@ -67,8 +67,10 @@ Connection: close
 Accept-Encoding: gzip, deflate
 User-Agent: okhttp/3.9.1
 
-user\_name=nuitgaspard&user\_pwd=[redacted]&type=2&way=2&message_lang=en-us
+user_name=nuitgaspard&user_pwd=[redacted]&type=2&way=2&message_lang=en-us
+```
 
+```http
 HTTP/1.1 200 OK
 Server: nginx
 Date: Wed, 03 Aug 2022 19:33:55 GMT
@@ -78,7 +80,22 @@ Vary: Accept-Encoding
 X-Powered-By: PHP/7.2.24
 Content-Length: 268
 
-{"state":"success","type":0,"desc":"接口操作成功","id":"508492","email":"","loginToken":"25cba956d908[...redacted...]","avatarPath":"","level":"0","mobile":null,"nickname":"nuitgaspard","loginName":"nuitgaspard","way":"2","bucket\_name":null,"end\_point":null}
+{
+  "state": "success",
+  "type": 0,
+  "desc": "接口操作成功",
+  "id": "508492",
+  "email": "",
+  "loginToken": "25cba956d908[...redacted...]",
+  "avatarPath": "",
+  "level": "0",
+  "mobile": null,
+  "nickname": "nuitgaspard",
+  "loginName": "nuitgaspard",
+  "way": "2",
+  "bucket_name": null,
+  "end_point": null
+}
 ```
 
 
@@ -187,9 +204,9 @@ Accept-Encoding: gzip, deflate
 User-Agent: okhttp/3.9.1
 
 mac=A4%3aC1%3a38%3a21%3a7F%3aD0&loginToken=92103907b8e0[...redacted....]&type=1&cp=&isBind=0
+```
 
------
-
+```http
 HTTP/1.1 200 OK
 Server: nginx
 Date: Thu, 24 Nov 2022 08:37:09 GMT
