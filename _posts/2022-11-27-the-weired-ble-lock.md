@@ -1,5 +1,5 @@
 ---
-title: The weired BLE-Lock
+title: The weird BLE-Lock
 layout: post
 type: blog
 updated: 2022-11-03T10:54:55+01:00
