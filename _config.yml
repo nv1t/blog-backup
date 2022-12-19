@@ -15,8 +15,7 @@ author: nv1t
 
 navbar-links:
   About Me:
-     - CV (recommended): "https://nv1t.github.io/markdown-cv"
-     - CV in PDF Format: "https://nv1t.github.io/pdf/jan.hoersch_CV.pdf"
+     - CV: "https://nv1t.github.io/markdown-cv"
   # Resources:
    # - Beautiful Jekyll: "https://beautifuljekyll.com"
    # - Learn markdown: "https://www.markdowntutorial.com/"
